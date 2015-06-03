@@ -87,6 +87,7 @@ $signatures[:php][:developer_notes] = [
 	Signature.new({:literal => '@fixme'}),
 	Signature.new({:literal => '@kludge'}),
 	Signature.new({:literal => '@note'}),
+	Signature.new({:literal => '@hack'}),
 ]
 
 $signatures[:php][:custom_strings] = [
