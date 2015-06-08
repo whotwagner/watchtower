@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1" includemasks="*_services.txt">
+			<drive name="C:">
+				<folder name="projects">
+					<folder name="liveid_infrastructure">
+						<folder name="host_reviews" marked="1" recursemasks="1"/>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="regex delimited" concurrent="1">
+			<replacedelimiter>===</replacedelimiter>
+			<searchtext>Telephony,TapiSrv,Running&#13;&#10;Wireless Configuration,WZCSVC,Running&#13;&#10;Print Spooler,Spooler,Running&#13;&#10;Messenger,Messenger,Running&#13;&#10;DHCP Client,Dhcp,Running</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+			<comments>Telephony,TapiSrv,Running&#13;&#10;Wireless Configuration,WZCSVC,Running&#13;&#10;Print Spooler,Spooler,Running&#13;&#10;Messenger,Messenger,Running&#13;&#10;DHCP Client,Dhcp,Running</comments>
+		</action>
+	</actionfile>
+</pgr:powergrep>

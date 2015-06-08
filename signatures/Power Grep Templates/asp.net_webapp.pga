@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep35.xsd" version="3.5">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1"/>
+		<action actiontype="search" searchtype="regex list" concurrent="1">
+			<searchtext label="DB: CommandText">CommandText</searchtext>
+			<searchtext label="DB: SqlCommand " enabled="0">SqlCommand</searchtext>
+			<searchtext label="DB: SqlConnection">SqlConnection</searchtext>
+			<searchtext label="DB: SqlDataAdapter" enabled="0">\bSqlDataAdapter\b</searchtext>
+			<searchtext label="DB: OleDbCommand" enabled="0">\bOleDbCommand\b</searchtext>
+			<searchtext label="DB: OdbcCommand" enabled="0">\bOdbcCommand\b</searchtext>
+			<searchtext label="DB: SqlCeCommand" enabled="0">\bSqlCeCommand\b</searchtext>
+			<searchtext label="DB: ConnectionString">ConnectionString</searchtext>
+			<searchtext label="DB: Sql400Command">Sql400Command</searchtext>
+			<searchtext label="CACHE: Cache.Insert">(?#System.Web.Caching.Cache Object stores results in Process, the data may be accessible through the entire application domain&#13;&#10;and therefore accessible to other users. This may cause data leakages)\bCache\.Insert\b</searchtext>
+			<searchtext label="IO: System.IO.FileStream" enabled="0">FileStream</searchtext>
+			<searchtext label="IO: System.IO.File">\bFile\b</searchtext>
+			<searchtext label="IO: System.Net.Sockets.Socket">\bSocket</searchtext>
+			<searchtext label="IO: System.IO.StreamReader" enabled="0">\bStreamReader\b</searchtext>
+			<searchtext label="IO: System.IO.StreamWriter ">StreamWriter</searchtext>
+			<searchtext label="IO: BinaryWriter" enabled="0">BinaryWriter</searchtext>
+			<searchtext label="CAS: CodeAccessPermission.Assert">CodeAccessPermission\.Assert</searchtext>
+			<searchtext label="OUTPUT: Response.Write">Response\.Write</searchtext>
+			<searchtext label="OUTPUT: &lt;%=">&lt;%=</searchtext>
+			<searchtext label="USER INPUT: Request.QueryString">\.QueryString</searchtext>
+			<searchtext label="USER INPUT: Request.params " enabled="0">\.params </searchtext>
+			<searchtext label="USER INPUT: Request.Items" enabled="0">\.Items</searchtext>
+			<searchtext label="USER INPUT: Request.Form" enabled="0">\.Form</searchtext>
+			<searchtext label="USER INPUT: Request.Url" enabled="0">\.Url</searchtext>
+			<searchtext label="USER INPUT: Request.RawUrl" enabled="0">\.RawUrl</searchtext>
+			<searchtext label="USER INPUT: Request.Cookie" enabled="0">\.Cookie</searchtext>
+			<searchtext label="USER INPUT: Request.ServerVariables" enabled="0">\.ServerVariables</searchtext>
+			<searchtext label="USER INPUT: Request.Headers" enabled="0">\.Headers</searchtext>
+			<searchtext label="USER INPUT: UrlReferrer" enabled="0">UrlReferrer</searchtext>
+			<searchtext label="USER INPUT: Files" enabled="0">Files</searchtext>
+			<searchtext label="USER INPUT: InputStream" enabled="0">InputStream</searchtext>
+			<searchtext label="USER INPUT: BinaryRead" enabled="0">BinaryRead</searchtext>
+			<searchtext label="USER INPUT: HttpMethod" enabled="0">HttpMethod</searchtext>
+			<searchtext label="USER INPUT: Browser" enabled="0">Browser</searchtext>
+			<searchtext label="USER INPUT: UserAgent" enabled="0">UserAgent</searchtext>
+			<searchtext label="USER INPUT: AcceptTypes" enabled="0">AcceptTypes</searchtext>
+			<searchtext label="USER INPUT: UserLanguages" enabled="0">UserLanguages</searchtext>
+			<searchtext label="CMDEXE: System.Diagnostics.Start.Process">Start\.Process</searchtext>
+			<searchtext label="CMDEXE: System.Diagnostics.Start.ProcessStartInfo">\.ProcessStartInfo\b</searchtext>
+			<searchtext label="REDIRECT: Redirect">\bRedirect\b</searchtext>
+			<searchtext label="REDIRECT: Status" enabled="0">\bStatus\b</searchtext>
+			<searchtext label="REDIRECT: StatusCode" enabled="0">\bStatusCode\b</searchtext>
+			<searchtext label="REDIRECT: AddHeader" enabled="0">\bAddHeader\b</searchtext>
+			<searchtext label="REDIRECT: AppendHeader" enabled="0">\bAppendHeader\b</searchtext>
+			<searchtext label="REDIRECT: Server.Transfer">Server\.Transfer</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

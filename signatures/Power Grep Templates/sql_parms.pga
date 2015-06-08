@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep34.xsd" version="3.4">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1">
+			<drive name="T:">
+				<folder name="Projects">
+					<folder name="Omni_American_Application_Assessment-[02_2008]">
+						<folder name="Project_Planning">
+							<folder name="OMA" marked="1" recursemasks="1"/>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="literal list" concurrent="1">
+			<searchtext>insert into</searchtext>
+			<searchtext>select </searchtext>
+			<searchtext>update </searchtext>
+			<searchtext>delete from</searchtext>
+			<searchtext>sql =</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+			<comments>sql injection</comments>
+		</action>
+	</actionfile>
+</pgr:powergrep>

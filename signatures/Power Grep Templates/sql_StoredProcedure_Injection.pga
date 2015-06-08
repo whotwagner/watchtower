@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep35.xsd" version="3.5">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1"/>
+		<action actiontype="search" searchtype="regex list" concurrent="1">
+			<searchtext>\bexec\b</searchtext>
+			<searchtext>\bexecute\b</searchtext>
+			<searchtext>\bsp_executesql\b</searchtext>
+			<searchtext label="LIKE">\bLIKE\B</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+			<comments>EXPERIMENT: Test to see if occurences of EXEC, EXECUTE and sp_executesql which use user supplied data can be manipulated to perform SQL injection. &#13;&#10;HYPOTHESIS: SQL Injection might exist in stored procedures that use EXEC, EXECUTE and sp_executesql&#13;&#10;RESEARCH: EXEC, EXECUTE and sp_executesql are methods which can be called from within stored procedures. The arguments to these method is a String representing a query to be executed. When user supplied values are used as arguments to these methods it may be possible to modify the query thereby performing SQL injection.&#13;&#10;&#13;&#10;EXPERIMENT: Test to see if LIKE clauses in Stored Procedures are vulnerable to wild card character manipulation (%, [, _).&#13;&#10;HYPOTHESIS: An Attacker may be able to modify arguments using wildcards.&#13;&#10;RESEARCH: LIKE clauses are subjectable to wildcards which can modify the results. Wild card characters must be replaced manually. SQLParameters from caller will not do this.&#13;&#10;s = s.Replace(&quot;[&quot;, &quot;[[]&quot;);&#13;&#10;s = s.Replace(&quot;%&quot;, &quot;[%]&quot;);&#13;&#10;s = s.Replace(&quot;_&quot;, &quot;[_]&quot;);&#13;&#10;&#13;&#10;References:&#13;&#10; * http://palisade.plynt.com/issues/2006Jun/injection-stored-procedures/&#13;&#10; * http://msdn.microsoft.com/en-us/library/ms161953.aspx</comments>
+		</action>
+	</actionfile>
+</pgr:powergrep>

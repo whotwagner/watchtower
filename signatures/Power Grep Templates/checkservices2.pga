@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1" includemasks="*_services.txt">
+			<drive name="C:">
+				<folder name="projects">
+					<folder name="liveid_infrastructure">
+						<folder name="host_reviews" marked="1" recursemasks="1"/>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="regex" concurrent="1" findall="1">
+			<searchtext>(?&lt;!Application Experience Lookup Service,AeLookupSvc,|Application Management,AppMgmt,|Background Intelligent Transfer Service,BITS,|CCMMgrSvc,CCMMgrSvc,|COM\+ Event System,EventSystem,|Computer Browser,Browser,|Cryptographic Services,CryptSvc,|DCOM Server Process Launcher,DcomLaunch,|Error Reporting Service,ERSvc,|eTrust Antivirus Job Server,InoTask,|eTrust Antivirus Realtime Server,InoRT,|eTrust Antivirus RPC Server,InoRPC,|Event Log,Eventlog,|Help and Support,helpsvc,|HID Input Service,HidServ,|HP Insight Foundation Agents,CqMgHost,|HP Insight NIC Agent,CPQNicMgmt,|HP Insight Server Agents,CqMgServ,|HP Insight Storage Agents,CqMgStor,|HP ProLiant Remote Monitor Service,CpqRcmc,|HP ProLiant System Shutdown Service,sysdown,|HP System Management Homepage,SysMgmtHp,|HP Version Control Agent,cpqvcagent,|HTTP SSL,HTTPFilter,|IIS Admin Service,IISADMIN,|IPSEC Services,PolicyAgent,|Logical Disk Manager,dmserver,|MOM,MOM,|Net Logon,Netlogon,|Network Connections,Netman,|Network Location Awareness \(NLA\),Nla,|Plug and Play,PlugPlay,|Protected Storage,ProtectedStorage,|Remote Access Connection Manager,RasMan,|Secondary Logon,seclogon,|Security Accounts Manager,SamSs,|Server,lanmanserver,|Shell Hardware Detection,ShellHWDetection,|SMS Agent Host,CcmExec,|SNMP Service,SNMP,|System Event Notification,SENS,|Task Scheduler,Schedule,|Telephony,TapiSrv,|Terminal Server Licensing,TermServLicensing,|Terminal Services,TermService,|Windows Management Instrumentation,winmgmt,|Wireless Configuration,WZCSVC,|WMI Performance Adapter,WmiApSrv,|Workstation,lanmanworkstation,|World Wide Web Publishing Service,W3SVC,)Running,Win32 ,LocalSystem,&#13;&#10;</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

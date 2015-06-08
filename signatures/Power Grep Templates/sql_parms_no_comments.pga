@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep34.xsd" version="3.4">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1" excludemasks="*.html; *.htm; *.doc; *.pdf;*.sql;">
+			<drive name="T:">
+				<folder name="Projects">
+					<folder name="Omni_American_Application_Assessment-[02_2008]" unmarked="1">
+						<folder name="Project_Planning">
+							<folder name="OMA" marked="1" recursemasks="1"/>
+						</folder>
+					</folder>
+					<folder name="University_of_Rochester_Comp_App_Assessment">
+						<folder name="UR_WWW_CODE" marked="1" recursemasks="1">
+							<folder name="www-data">
+								<folder name="ITS">
+									<folder name="web">
+										<folder name="blog" unmarked="1"/>
+									</folder>
+								</folder>
+							</folder>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="regex list" concurrent="1" targettype="same" backuptype="multi name" backupdest="same folder">
+			<searchtext>insert into</searchtext>
+			<searchtext>select </searchtext>
+			<searchtext>update </searchtext>
+			<searchtext>!^\/\/</searchtext>
+			<searchtext>!/(?!\/\/)/</searchtext>
+			<searchtext label="mysql_query">mysql_query</searchtext>
+			<searchtext>!/^#/</searchtext>
+			<searchtext>/^(?!\/\/)/</searchtext>
+			<searchtext>!\&lt;select</searchtext>
+			<searchtext>delete from</searchtext>
+			<searchtext>sql =</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+			<comments>sql injection</comments>
+		</action>
+	</actionfile>
+</pgr:powergrep>

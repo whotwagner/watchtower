@@ -35,6 +35,10 @@ $signatures[:php][:dangerous_functions] = [
 	Signature.new({:literal => 'system('}),
 	Signature.new({:literal => 'unserialize('}),
 	Signature.new({:literal => '`'}),
+	Signature.new({:literal => 'call_user_func'}),
+	Signature.new({:literal => 'call_user_func_array'}),
+	Signature.new({:literal => 'call_user_method'}),
+	Signature.new({:literal => 'call_user_method_array'}),
 ]
 
 $signatures[:php][:payload_obfuscators] = [
@@ -78,6 +82,16 @@ $signatures[:php][:sql] = [
 	Signature.new({:literal => 'REPLACE'}),
 	Signature.new({:literal => 'DROP'}),
 	Signature.new({:literal => 'TRUNCATE'}),
+	Signature.new({:literal => 'mysql_query'}),
+	Signature.new({:literal => 'mssql_query'}),
+	Signature.new({:literal => 'pg_query'}),
+	Signature.new({:literal => 'pg_exec'}),
+	Signature.new({:literal => 'mysqli->prepare'}),
+	Signature.new({:literal => 'stmt->prepare'}),
+	Signature.new({:literal => 'stmt->bind_param'}),
+	Signature.new({:literal => 'stmt->execute'}),
+	Signature.new({:literal => 'odbc_prepare'}),
+
     # todo: include some signatures here to spot dynamic SQL
 ]
 

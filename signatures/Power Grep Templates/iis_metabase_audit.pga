@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1" includemasks="*_iis.txt">
+			<drive name="C:">
+				<folder name="projects">
+					<folder name="liveid_infrastructure">
+						<folder name="host_reviews" marked="1" recursemasks="1"/>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="regex delimited" concurrent="1">
+			<replacedelimiter>===</replacedelimiter>
+			<searchtext>AnonymousUserName               : \(STRING\) &quot;(?!IUSR_)&#13;&#10;WAMUserName                     : \(STRING\) &quot;(?!IWAM_)&#13;&#10;EnableDirBrowsing               : \(BOOLEAN\) True&#13;&#10;Path                            : \(STRING\) &quot;c:\\&#13;&#10;LogFileDirectory                : \(EXPANDSZ\) &quot;C:\\&#13;&#10;  &quot;400,\*,FILE,C:\\WINDOWS\\help\\iisHelp\\common\\400\.htm&quot;&#13;&#10;^  &quot;1,(?!C:\\WINDOWS\\system32\\inetsrv\\asp\.dll|C:\\WINDOWS\\Microsoft\.NET\\Framework)&#13;&#10;AspLogErrorRequests             : \(BOOLEAN\) True&#13;&#10;AspScriptErrorSentToBrowser     : \(BOOLEAN\) True&#13;&#10;AspScriptErrorMessage           : \(STRING\) (?!&quot;An error occurred on the server when processing the URL\.  Please contact the system administrator\.&quot;)&#13;&#10;AspEnableParentPaths            : \(BOOLEAN\) True&#13;&#10;AppAllowDebugging               : \(BOOLEAN\) True&#13;&#10;AppAllowClientDebug             : \(BOOLEAN\) True&#13;&#10;\.printer&#13;&#10;FrontPageWeb&#13;&#10;/W3SVC/1/Root/IISAdmin&#13;&#10;UseHostName&#13;&#10;ServerConfigSSL40</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+			<comments>## None default anonymous/application pool user (check user for admin privs):&#13;&#10;AnonymousUserName               : \(STRING\) &quot;(?!IUSR_)&#13;&#10;WAMUserName                     : \(STRING\) &quot;(?!IWAM_)&#13;&#10;&#13;&#10;## Directory browsing Enabled:&#13;&#10;EnableDirBrowsing               : \(BOOLEAN\) True&#13;&#10;&#13;&#10;## Path on System Drive&#13;&#10;Path                            : \(STRING\) &quot;c:\\&#13;&#10;&#13;&#10;## Logging to the system drive&#13;&#10;LogFileDirectory                : \(EXPANDSZ\) &quot;C:\\&#13;&#10;&#13;&#10;## Custom HTTP Error Pages not Utilized:&#13;&#10;  &quot;400,\*,FILE,C:\\WINDOWS\\help\\iisHelp\\common\\400\.htm&quot;&#13;&#10;&#13;&#10;## Allowed Web Server Extension Restrictions (other than asp)&#13;&#10;^  &quot;1,(?!C:\\WINDOWS\\system32\\inetsrv\\asp\.dll|C:\\WINDOWS\\Microsoft\.NET\\Framework)&#13;&#10;&#13;&#10;## Logging to the Windows Event Log&#13;&#10;AspLogErrorRequests             : \(BOOLEAN\) True&#13;&#10;&#13;&#10;## Script Errors return to end-user&#13;&#10;AspScriptErrorSentToBrowser     : \(BOOLEAN\) True&#13;&#10;&#13;&#10;## Default Error message&#13;&#10;AspScriptErrorMessage           : \(STRING\) (?!&quot;An error occurred on the server when processing the URL\.  Please contact the system administrator\.&quot;)&#13;&#10;&#13;&#10;## Parent Paths enabled&#13;&#10;AspEnableParentPaths            : \(BOOLEAN\) True&#13;&#10;&#13;&#10;## Debugging Enabled&#13;&#10;AppAllowDebugging               : \(BOOLEAN\) True&#13;&#10;AppAllowClientDebug             : \(BOOLEAN\) True&#13;&#10;&#13;&#10;## Extra dangerous script mappings mapped&#13;&#10;\.printer&#13;&#10;&#13;&#10;## FrontPage extensions installed&#13;&#10;FrontPageWeb&#13;&#10;&#13;&#10;## IIS Admin website enabled&#13;&#10;/W3SVC/1/Root/IISAdmin&#13;&#10;&#13;&#10;## 40-bit SSL is enabled&#13;&#10;ServerConfigSSL40&#13;&#10;&#13;&#10;## IIS 5.0 only, prevents IP NAT disclosures&#13;&#10;UseHostName</comments>
+		</action>
+	</actionfile>
+</pgr:powergrep>

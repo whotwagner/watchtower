@@ -1,0 +1,55 @@
+"FILEIO: fopen
+"FILEIO: readfile
+"FILEIO: file
+"FILEIO: fpassthru
+"FILEIO: gzopen
+"FILEIO: gzfile
+"FILEIO: gzpassthru
+"FILEIO: readgzfile
+"FILEIO: copy
+"FILEIO: rename
+"FILEIO: rmdir
+"FILEIO: mkdir
+"FILEIO: unlink
+"FILEIO: file_get_contents
+"FILEIO: file_put_contents
+"FILEIO: parse_ini_file
+"INC: include
+"INC: include_once
+"INC: require
+"INC: require_once
+"INC: virtual
+"INFODISC: phpinfo
+"USER INPUT: $_GET
+"USER INPUT: $HTTP_GET_VARS
+"USER INPUT: $_POST
+"USER INPUT: $HTTP_POST_VARS
+"USER INPUT: $_COOKIE
+"USER INPUT: $HTTP_COOKIE_VARS
+"USER INPUT: $_REQUEST
+"USER INPUT: $_FILES
+"USER INPUT: $HTTP_POST_FILES
+"USER INPUT: $_SERVER['REQUEST_METHOD']
+"USER INPUT: $_SERVER['QUERY_STRING']
+"USER INPUT: $_SERVER['REQUEST_URI']
+"USER INPUT: $_SERVER['HTTP_ACCEPT']
+"USER INPUT: $_SERVER['HTTP_ACCEPT_CHARSET']
+"USER INPUT: $_SERVER['HTTP_ACCEPT_ENCODING']
+"USER INPUT: $_SERVER['HTTP_ACCEPT_LANGUAGE']
+"USER INPUT: $_SERVER['HTTP_CONNECTION']
+"USER INPUT: $_SERVER['HTTP_HOST']
+"USER INPUT: $_SERVER['HTTP_REFERER']
+"USER INPUT: $_SERVER['HTTP_USER_AGENT']
+"USER INPUT: $_SERVER['PHP_SELF']
+"REDIRECT: http_redirect
+"REDIRECT: header
+"REDIRECT: HttpMessage::setResponseCode">HttpMessage::setResponseCode
+"REDIRECT: HttpMessage::setHeaders">HttpMessage::setHeaders
+"SESSION: $_SESSION[
+"SOCKET: socket_create
+"SOCKET: socket_connect
+"SOCKET: socket_write
+"SOCKET: socket_send
+"SOCKET: socket_recv
+"SOCKET: fsockopen
+"SOCKET: pfsockopen
