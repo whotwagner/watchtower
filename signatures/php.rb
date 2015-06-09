@@ -1,3 +1,4 @@
+# 6.9.2015 - Updated w/signatures from Bishop Fox PowerGrep templates.
 # Enumerate a hash containing all of the various signatures (grouped
 # topically) for which one may want to scan.
 $signatures[:php] ||= {}
@@ -16,9 +17,22 @@ $signatures[:php][:dangerous_functions] = [
 	Signature.new({:literal => 'fread('}),
 	Signature.new({:literal => 'fread('}),
 	Signature.new({:literal => 'fsockopen('}),
+	Signature.new({:literal => 'fpassthru'}),
+	Signature.new({:literal => 'gzopen'}),
+	Signature.new({:literal => 'gzfile'}),
+	Signature.new({:literal => 'gzpassthru'}),
+	Signature.new({:literal => 'readgzfile'}),
+	Signature.new({:literal => 'copy'}),
+	Signature.new({:literal => 'rename'}),
+	Signature.new({:literal => 'rmdir'}),
+	Signature.new({:literal => 'mkdir'}),
+	Signature.new({:literal => 'unlink'}),
+	Signature.new({:literal => 'file_put_contents'}),
+	Signature.new({:literal => 'parse_ini_file'}),	
 	Signature.new({:literal => 'goto'}),
     # omit the parenthesis, because these are also keywords
 	Signature.new({:literal => 'include'}),
+	Signature.new({:literal => 'virtual'}),
 	Signature.new({:literal => 'include_once'}),
 	Signature.new({:literal => 'mail('}),
 	Signature.new({:literal => 'ob_get_contents('}),
@@ -35,6 +49,19 @@ $signatures[:php][:dangerous_functions] = [
 	Signature.new({:literal => 'system('}),
 	Signature.new({:literal => 'unserialize('}),
 	Signature.new({:literal => '`'}),
+	Signature.new({:literal => 'call_user_func'}),
+	Signature.new({:literal => 'call_user_func_array'}),
+	Signature.new({:literal => 'call_user_method'}),
+	Signature.new({:literal => 'call_user_method_array'}),
+]
+
+$signatures[:php][:sockets] = [
+	Signature.new({:literal => 'socket_create'}),
+	Signature.new({:literal => 'socket_connect'}),
+	Signature.new({:literal => 'socket_write'}),
+	Signature.new({:literal => 'socket_send'}),
+	Signature.new({:literal => 'socket_recv'}),
+	Signature.new({:literal => 'fsockopen'}),
 ]
 
 $signatures[:php][:payload_obfuscators] = [
@@ -68,6 +95,31 @@ $signatures[:php][:globals] = [
 	Signature.new({:literal => '$_COOKIE'}),
 	Signature.new({:literal => '$_FILES'}),
 	Signature.new({:literal => '$GLOBALS'}),
+	Signature.new({:literal => '$HTTP_GET_VARS'}),
+	Signature.new({:literal => '$HTTP_POST_VARS'}),
+	Signature.new({:literal => '$HTTP_COOKIE_VARS'}),
+	Signature.new({:literal => '$HTTP_POST_FILES'}),
+	Signature.new({:literal => '$_SERVER[\'REQUEST_METHOD\']'}),
+	Signature.new({:literal => '$_SERVER[\'QUERY_STRING\']'}),
+	Signature.new({:literal => '$_SERVER[\'REQUEST_URI\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_ACCEPT\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_ACCEPT_CHARSET\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_ACCEPT_ENCODING\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_ACCEPT_LANGUAGE\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_CONNECTION\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_HOST\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_REFERER\']'}),
+	Signature.new({:literal => '$_SERVER[\'HTTP_USER_AGENT\']'}),
+	Signature.new({:literal => '$_SERVER[\'PHP_SELF\']'}),
+
+]
+
+$signatures[:php][:redirects] = [
+	Signature.new({:literal => 'http_redirect'}),
+	Signature.new({:literal => 'header'}),
+	Signature.new({:literal => 'HttpMessage::setResponseCode">HttpMessage::setResponseCode'}),
+	Signature.new({:literal => 'HttpMessage::setHeaders">HttpMessage::setHeaders'}),
+
 ]
 
 $signatures[:php][:sql] = [
@@ -78,6 +130,16 @@ $signatures[:php][:sql] = [
 	Signature.new({:literal => 'REPLACE'}),
 	Signature.new({:literal => 'DROP'}),
 	Signature.new({:literal => 'TRUNCATE'}),
+	Signature.new({:literal => 'mysql_query'}),
+	Signature.new({:literal => 'mssql_query'}),
+	Signature.new({:literal => 'pg_query'}),
+	Signature.new({:literal => 'pg_exec'}),
+	Signature.new({:literal => 'mysqli->prepare'}),
+	Signature.new({:literal => 'stmt->prepare'}),
+	Signature.new({:literal => 'stmt->bind_param'}),
+	Signature.new({:literal => 'stmt->execute'}),
+	Signature.new({:literal => 'odbc_prepare'}),
+
     # todo: include some signatures here to spot dynamic SQL
 ]
 
@@ -87,6 +149,7 @@ $signatures[:php][:developer_notes] = [
 	Signature.new({:literal => '@fixme'}),
 	Signature.new({:literal => '@kludge'}),
 	Signature.new({:literal => '@note'}),
+	Signature.new({:literal => '@hack'}),
 ]
 
 $signatures[:php][:custom_strings] = [
@@ -94,6 +157,7 @@ $signatures[:php][:custom_strings] = [
 	Signature.new({:literal => 'password'}),
 	Signature.new({:literal => 'host'}),
 	Signature.new({:literal => 'database'}),
+	Signature.new({:literal => 'phpinfo'}),
 ]
 
 $signatures[:php][:hashes] = [
