@@ -1,4 +1,5 @@
 # 6.9.2015 - Updated w/signatures from Bishop Fox PowerGrep templates.
+# 7.31.2015 - Added swear words to custom signature strings
 # Enumerate a hash containing all of the various signatures (grouped
 # topically) for which one may want to scan.
 $signatures[:php] ||= {}
@@ -158,6 +159,8 @@ $signatures[:php][:custom_strings] = [
 	Signature.new({:literal => 'host'}),
 	Signature.new({:literal => 'database'}),
 	Signature.new({:literal => 'phpinfo'}),
+	Signature.new({:name => 'Profanity', :regex => '[Ff]uck|[Ss]hit'}),
+
 ]
 
 $signatures[:php][:hashes] = [
