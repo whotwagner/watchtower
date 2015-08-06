@@ -3,7 +3,7 @@
 # topically) for which one may want to scan.
 $signatures[:comments] ||= {}
 
-$signatures[:coments][:developer_notes] = [
+$signatures[:comments][:developer_notes] = [
 	Signature.new({:literal => 'todo'}),
 	Signature.new({:literal => 'bug'}),
 	Signature.new({:literal => 'fixme'}),
@@ -13,7 +13,7 @@ $signatures[:coments][:developer_notes] = [
 	Signature.new({:literal => 'secur'}),
 ]
 
-$signatures[:php][:profanity] = [
+$signatures[:comments][:profanity] = [
 	Signature.new({:name => 'f***', :regex => '[Ff]uck'}),
 	Signature.new({:name => 'sh**', :regex => '[Ss]hit'}),
 	Signature.new({:name => 'd*mn', :regex => '[Dd]amn'}),
