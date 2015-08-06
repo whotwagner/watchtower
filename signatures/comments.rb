@@ -5,7 +5,7 @@ $signatures[:comments] ||= {}
 
 $signatures[:comments][:developer_notes] = [
 	Signature.new({:literal => 'todo'}),
-	Signature.new({:literal => 'bug'}),
+	Signature.new({:name => 'bug', :regex => '\bbug\b'
 	Signature.new({:literal => 'fixme'}),
 	Signature.new({:literal => 'kludge'}),
 	Signature.new({:literal => 'note'}),
