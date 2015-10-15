@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep34.xsd" version="3.4">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1" includemasks="*.asp,*.inc"/>
+		<action actiontype="search" searchtype="regex list" concurrent="1">
+			<searchtext label="CMDEXEC: Wscript.Shell">WScript\.Shell</searchtext>
+			<searchtext label="CMDEXEC: Wscript.Shell">\bWscript\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="CMDEXEC: Scripting.FileSystemObject">Scripting\.FileSystemObject</searchtext>
+			<searchtext label="CMDEXEC: Execute">\bExecute\b</searchtext>
+			<searchtext label="SQL: ADODB.Connection">ADODB\.Connection</searchtext>
+			<searchtext label="DB: Connection">\bConnection\b(?#TAOSSA, pg 1113)</searchtext>
+			<searchtext label="DB: Command">\bCommand\b(?#TAOSSA, pg 1113)</searchtext>
+			<searchtext label="DB: RecordSet">\bRecordSet\b(?#TAOSSA, pg 1113)</searchtext>
+			<searchtext label="DB: INSERT">\bINSERT\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="DB: SELECT">\bSELECT\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="DB: WHERE">\bWHERE\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="DB: Execute()">\bExecute\((?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="DB: Open()">\bOpen\((?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="FILE: FileSystemObject">\bFileSystemObject\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="FILE: MapPath">\bMapPath\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="FILE: filename">\bfilename\b(?#TAOSSA, pg 1115)</searchtext>
+			<searchtext label="INCLUDE: Server.Transfer()">\bServer\.Transfer\((?#TAOSSA, pg 1117. Moves control of executing into the specificed file. Similar to Server.Execute. Should never contain user supplied data)</searchtext>
+			<searchtext label="INCLUDE: Server.Execute()">\bServer\.Execute\((?#TAOSSA, pg 1117. Loads the affected file. Similar to an include)</searchtext>
+			<searchtext label="INCLUDE: SSI #include">\b#include\b(?#TAOSSA, pg 1116)</searchtext>
+			<searchtext label="REDIRECT: Response.Redirect()">\bResponse\.Redirect\((?#Could let to a forced redirect issue. Don't forget RFFC 2396 user:pass@URI syntax. HSB, pg 100)</searchtext>
+			<searchtext label="OUTPUT: &lt;%=" enabled="0">&lt;%=(?#TAOSSA, pg 1118)</searchtext>
+			<searchtext label="OUTPUT: Response.write" enabled="0">\bresponse\.write\b(?#TAOSSA, pg 1118)</searchtext>
+			<searchtext label="OUTPUT: Response.BinaryWrite" enabled="0">\bResponse\.BinaryWrite\b(?#HSB, pg 259)</searchtext>
+			<searchtext label="INPUT: Form()" enabled="0">\bForm\((?#HSB, pg 260)</searchtext>
+			<searchtext label="INPUT: Request.form()" enabled="0">\bRequest\.form\((?#HSB, pg 260)</searchtext>
+			<searchtext label="INPUT: Request.Querystring()" enabled="0">\bRequest\.Querystring\((?#HSB, pg 260)</searchtext>
+			<searchtext label="INPUT: Request.ServerVariables()" enabled="0">\bRequest\.ServerVariables\((?#HSB, pg 260)</searchtext>
+			<searchtext label="NOTES">(?#One thing to keep in mind is that ASP is vulnerable to a NUL-byte string termination, so it's possible to end strings early using 0x00. TAOSSA, pg 1117)</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

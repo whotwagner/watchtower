@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1" includemasks="*_reg.txt">
+			<drive name="C:">
+				<folder name="projects">
+					<folder name="liveid_infrastructure">
+						<folder name="host_reviews" marked="1" recursemasks="1"/>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="regex delimited" concurrent="1">
+			<replacedelimiter>===</replacedelimiter>
+			<searchtext>IPEnableRouter    REG_DWORD    0x1&#13;&#10;EnableICMPRedirect    REG_DWORD    0x1&#13;&#10;EnableDeadGWDetect    REG_DWORD    0x0&#13;&#10;SynAttackProtect    REG_DWORD    0x0</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

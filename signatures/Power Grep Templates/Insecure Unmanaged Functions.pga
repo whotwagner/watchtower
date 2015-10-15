@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep41.xsd" version="4.1">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1">
+			<drive name="L:">
+				<folder name="svn">
+					<folder name="internal">
+						<folder name="trunk">
+							<folder name="engagements">
+								<folder name="Salt River Project">
+									<folder name="20100525 OMS Hybrid Application Assessment">
+										<folder name="Source Code">
+											<folder name="oms_Source">
+												<folder name="CPlusPlus" marked="1" recursemasks="1"/>
+												<folder name="Net" unmarked="1" recursemasks="1"/>
+											</folder>
+										</folder>
+									</folder>
+								</folder>
+							</folder>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="simple" searchtype="literal list" concurrent="1">
+			<searchtext>Strcpy</searchtext>
+			<searchtext>Strcat</searchtext>
+			<searchtext>Strcat</searchtext>
+			<searchtext>Strlen</searchtext>
+<searchtext>Strncpy</searchtext>
+<searchtext>Strncat</searchtext>
+<searchtext>Strcmp</searchtext>
+<searchtext>Strcmp</searchtext>
+<searchtext>Mbcstows</searchtext>
+<searchtext>_strdup</searchtext>
+<searchtext>_strrev</searchtext>
+<searchtext>Strstr</searchtext>
+<searchtext>Strstr</searchtext>
+<searchtext>Sprintf</searchtext>
+<searchtext>_snprintf</searchtext>
+<searchtext>Printf</searchtext>
+<searchtext>Fprintf</searchtext>
+<searchtext>Gets</searchtext>
+<searchtext>Scanf</searchtext>
+<searchtext>Fscanf</searchtext>
+<searchtext>Sscanf</searchtext>
+<searchtext>Strcspn</searchtext>
+<searchtext>MultiByteToWideChar</searchtext>
+<searchtext>WideCharToMultiByte</searchtext>
+<searchtext>GetShortPathNameW</searchtext>
+<searchtext>GetLongPathNameW</searchtext>
+<searchtext>WinExec</searchtext>
+<searchtext>CreateProcessW</searchtext>
+<searchtext>GetEnvironmentVariableW</searchtext>
+<searchtext>SetEnvironmentVariableW</searchtext>
+<searchtext>SetEnvironmentVariableW</searchtext>
+<searchtext>ExpandEnvironmentStringsW</searchtext>
+<searchtext>SearchPathW</searchtext>
+<searchtext>SearchPathW</searchtext>
+<searchtext>SearchPathW</searchtext>
+<searchtext>Lstrcpy</searchtext>
+<searchtext>Wcscpy</searchtext>
+<searchtext>_mbscpy</searchtext>
+<searchtext>StrCpyA</searchtext>
+<searchtext>StrCpyW</searchtext>
+<searchtext>lstrcatA</searchtext>
+<searchtext>lstrcatW</searchtext>
+<searchtext>Wcscat</searchtext>
+<searchtext>_mbscat</searchtext>
+<searchtext>Wcslen</searchtext>
+<searchtext>_mbslen</searchtext>
+<searchtext>_mbstrlen</searchtext>
+<searchtext>lstrlenA</searchtext>
+<searchtext>lstrlenW</searchtext>
+<searchtext>Wcsncpy</searchtext>
+<searchtext>_mbsncpy</searchtext>
+<searchtext>StrCpyN</searchtext>
+<searchtext>lstrcpynW</searchtext>
+<searchtext>lstrcatnA</searchtext>
+<searchtext>lstrcatnW</searchtext>
+<searchtext>Wcsncat</searchtext>
+<searchtext>_mbsncat</searchtext>
+<searchtext>_mbsnbcat</searchtext>
+<searchtext>lstrcmpA</searchtext>
+<searchtext>lstrcmpW</searchtext>
+<searchtext>StrCmp</searchtext>
+<searchtext>Wcscmp</searchtext>
+<searchtext>_mbscmp</searchtext>
+<searchtext>Strcoll</searchtext>
+<searchtext>Wcscoll</searchtext>
+<searchtext>_mbscoll</searchtext>
+<searchtext>_stricmp</searchtext>
+<searchtext>lstrcmpiA</searchtext>
+<searchtext>lstrcmpiW</searchtext>
+<searchtext>_wcsicmp</searchtext>
+<searchtext>_mbsicmp</searchtext>
+<searchtext>StrCmp</searchtext>
+<searchtext>_stricoll</searchtext>
+<searchtext>_wcsicoll</searchtext>
+<searchtext>_mbsicoll</searchtext>
+<searchtext>StrColl</searchtext>
+<searchtext>_wcsdup</searchtext>
+<searchtext>_mbsdup</searchtext>
+<searchtext>StrDup</searchtext>
+<searchtext>_wcsrev</searchtext>
+<searchtext>_mbsrev</searchtext>
+<searchtext>_strlwr</searchtext>
+<searchtext>_mbslwr</searchtext>
+<searchtext>_wcslwr</searchtext>
+<searchtext>_strupr</searchtext>
+<searchtext>_mbsupr</searchtext>
+<searchtext>_wcsupr</searchtext>
+<searchtext>Wcsstr</searchtext>
+<searchtext>_mbsstr</searchtext>
+<searchtext>Strspn</searchtext>
+<searchtext>Wcsspn</searchtext>
+<searchtext>_mbsspn</searchtext>
+<searchtext>Strpbrk</searchtext>
+<searchtext>Wcspbrk</searchtext>
+<searchtext>_mbspbrk</searchtext>
+<searchtext>Wcsxfrm</searchtext>
+<searchtext>Wcscspn</searchtext>
+<searchtext>_mbcscpn</searchtext>
+<searchtext>Swprintf</searchtext>
+<searchtext>wsprintfA</searchtext>
+<searchtext>wsprintfW</searchtext>
+<searchtext>Vsprintf</searchtext>
+<searchtext>Vswprintf</searchtext>
+<searchtext>_snwprintf</searchtext>
+<searchtext>_vsnprintf</searchtext>
+<searchtext>_vsnwprintf</searchtext>
+<searchtext>Vprintf</searchtext>
+<searchtext>Vwprintf</searchtext>
+<searchtext>Vfprintf</searchtext>
+<searchtext>Vwfprintf</searchtext>
+<searchtext>_getws</searchtext>
+<searchtext>Fwscanf</searchtext>
+<searchtext>Wscanf</searchtext>
+<searchtext>Swscanf</searchtext>
+<searchtext>OemToCharA</searchtext>
+<searchtext>OemToCharW</searchtext>
+<searchtext>CharToOemA</searchtext>
+<searchtext>CharToOemW</searchtext>
+<searchtext>CharUpperA</searchtext>
+<searchtext>CharUpperW</searchtext>
+<searchtext>CharUpperBuffW</searchtext>
+<searchtext>CharLowerA</searchtext>
+<searchtext>CharLowerW</searchtext>
+<searchtext>CharLowerBuffW</searchtext>
+			<sectioning sectiontype="line"/>
+			<context contexttype="line" numbering="1" extra="context"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

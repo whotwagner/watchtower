@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep34.xsd" version="3.4">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1" excludemasks="*.html; *.htm; *.doc; *.pdf;*.sql;*.js;*.css;*.log; *.xsl; *.dat; *.gif;*.properties;*.dtd;*.">
+			<drive name="T:">
+				<folder name="Projects">
+					<folder name="new">
+						<folder name="Broadridge">
+							<folder name="Source_Code">
+								<folder name="IMB" marked="1" recursemasks="1"/>
+							</folder>
+						</folder>
+						<folder name="University_of_Rochester_Comp_App_Assessment" unmarked="1"/>
+					</folder>
+					<folder name="Omni_American_Application_Assessment-[02_2008]" unmarked="1">
+						<folder name="Project_Planning">
+							<folder name="OMA" marked="1" recursemasks="1"/>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="literal list" concurrent="1">
+			<searchtext>crypt</searchtext>
+			<searchtext>encrypt</searchtext>
+			<searchtext>3des</searchtext>
+			<searchtext>blowfish</searchtext>
+			<searchtext>hash</searchtext>
+			<searchtext>md5</searchtext>
+			<searchtext>sha1</searchtext>
+			<searchtext>sha-1</searchtext>
+			<searchtext>twofish</searchtext>
+			<searchtext>rijndael</searchtext>
+			<searchtext>rc4</searchtext>
+			<searchtext>rc2</searchtext>
+			<searchtext>diffie</searchtext>
+			<searchtext>encryption</searchtext>
+			<searchtext>publickey</searchtext>
+			<searchtext>pubkey</searchtext>
+			<searchtext>ssl</searchtext>
+			<searchtext>tls</searchtext>
+			<searchtext>AES-128</searchtext>
+			<searchtext>AES-256</searchtext>
+			<searchtext>privatekey</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

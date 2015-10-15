@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1">
+			<drive name="Z:">
+				<folder name="security">
+					<folder name="client_data">
+						<folder name="URS-OP14601">
+							<folder name="Pentest">
+								<folder name="Source Code" marked="1" recursemasks="1"/>
+							</folder>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="literal list" concurrent="1">
+			<searchtext label="DES">DES</searchtext>
+			<searchtext label="3DES">3des</searchtext>
+			<searchtext label="crypt">crypt</searchtext>
+			<searchtext label="AES"/>
+			<searchtext label="Elgamal">elgamal</searchtext>
+			<searchtext label="md5">md5</searchtext>
+			<searchtext label="ripemd">ripemd</searchtext>
+			<searchtext label="sha">sha1</searchtext>
+			<searchtext label="sha-1">sha-1</searchtext>
+			<searchtext label="pgp">pgp</searchtext>
+			<searchtext label="gpg">gpg</searchtext>
+			<searchtext label="blowfish">blowfish</searchtext>
+			<searchtext label="twofish">twofish</searchtext>
+			<searchtext label="cbc">cbc</searchtext>
+			<searchtext label="sftp">sftp</searchtext>
+			<searchtext label="rc4">rc4</searchtext>
+			<searchtext label="rc2">rc2</searchtext>
+			<searchtext label="rijndael">rijndael</searchtext>
+			<searchtext>sha1</searchtext>
+			<searchtext>sha-1</searchtext>
+			<searchtext>diffie</searchtext>
+			<searchtext>encryption</searchtext>
+			<searchtext>publickey</searchtext>
+			<searchtext>pubkey</searchtext>
+			<searchtext>ssl</searchtext>
+			<searchtext>tls</searchtext>
+			<searchtext>AES-128</searchtext>
+			<searchtext>AES-256</searchtext>
+			<searchtext>privatekey</searchtext>
+			
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

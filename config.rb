@@ -74,6 +74,7 @@ $configs = {
         './signatures/java.rb',
 		'./signatures/sql.rb',
 		'./signatures/linux_files.rb',
+		'./signatures/comments.rb',
 		# './signatures/wordpress.rb',
 		# './signatures/blocklist.rb',
 	].sort,
@@ -151,3 +152,7 @@ $configs[:ftype_ext][:java]          = %w[java jsp groovy properties xml]
 # Note: if you're going to scan blocklists, be prepared to wait a 
 # long time to complete a scan, because the blocklists are huge.
 $configs[:ftype_ext][:blocklists]    = %w[php phpt php3 php4 php5 phtml html]
+
+# map the comments.rb signature file to all filetypes
+# this should probably inclue *all* filetypes, but this will be sufficient for testing.
+$configs[:ftype_ext][:comments]      = %w[php phpt php3 php4 php5 phtml html js py rb xml sh c h]

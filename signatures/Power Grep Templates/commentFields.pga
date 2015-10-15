@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep35.xsd" version="3.5">
+	<actionfile>
+		<fileselection globalmasks="1" includemasks="*.config"/>
+		<action actiontype="search" searchtype="regex list" concurrent="1">
+			<searchtext label="//" enabled="0">(?&lt;!:|-)//</searchtext>
+			<searchtext label="&lt;!--" enabled="0">&lt;!--</searchtext>
+			<searchtext label="/\*" enabled="0">/\*</searchtext>
+			<searchtext>TODO</searchtext>
+			<searchtext>FIX</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

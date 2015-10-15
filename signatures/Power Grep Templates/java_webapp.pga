@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep33.xsd" version="3.3">
+	<actionfile>
+		<fileselection globalmasks="1"/>
+		<action actiontype="search" searchtype="regex list" concurrent="1">
+			<searchtext label="XSS: &quot;&lt;c:out&quot; not used" enabled="0">(?&lt;!&quot;)\${</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getParameter&quot;">&lt;%= request\.getParameter\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getQueryString&quot;">&lt;%= request\.getQueryString\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getHeader&quot;">&lt;%= request\.getHeader\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getRequestURI&quot;">&lt;%= request\.getRequestURI\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getRequestURL&quot;">&lt;%= request\.getRequestURL\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getCookies&quot;">&lt;%= request\.getCookies\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getRequestedSessionID&quot;">&lt;%= request\.getRequestedSessionID\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getInputStream&quot;">&lt;%= request\.getInputStream\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getReader&quot;">&lt;%= request\.getReader\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getMethod&quot;">&lt;%= request\.getMethod\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getProtocol&quot;">&lt;%= request\.getProtocol\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getServerName&quot;">&lt;%= request\.getServerName\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getRemoteUser&quot;">&lt;%= request\.getRemoteUser\(</searchtext>
+			<searchtext label="XSS: &quot;&lt;%= request.getUserPrincipal&quot;">&lt;%= request\.getUserPrincipal\(</searchtext>
+			<searchtext label="USER INPUT: getParameter" enabled="0">\.getParameter</searchtext>
+			<searchtext label="USER INPUT: getQueryString" enabled="0">\.getQueryString</searchtext>
+			<searchtext label="USER INPUT: getHeader" enabled="0">\.getHeader</searchtext>
+			<searchtext label="USER INPUT: getRequestURI" enabled="0">\.getRequestURI</searchtext>
+			<searchtext label="USER INPUT: getRequestURL" enabled="0">\.getRequestURL</searchtext>
+			<searchtext label="USER INPUT: getCookies" enabled="0">\.getCookies</searchtext>
+			<searchtext label="USER INPUT: getRequestedSessionID" enabled="0">\.getRequestedSessionID</searchtext>
+			<searchtext label="USER INPUT: getInputStream" enabled="0">\.getInputStream</searchtext>
+			<searchtext label="USER INPUT: getReader" enabled="0">\.getReader</searchtext>
+			<searchtext label="USER INPUT: getMethod" enabled="0">\.getMethod</searchtext>
+			<searchtext label="USER INPUT: getProtocol" enabled="0">\.getProtocol</searchtext>
+			<searchtext label="USER INPUT: getServerName" enabled="0">\.getServerName</searchtext>
+			<searchtext label="USER INPUT: getRemoteUser" enabled="0">\.getRemoteUser</searchtext>
+			<searchtext label="USER INPUT: getUserPrincipal" enabled="0">\.getUserPrincipal</searchtext>
+			<searchtext label="BADAPI-FILEIO: File()">\bFile\(</searchtext>
+			<searchtext label="BADAPI-FILEIO: java.io.FileInputStream">\bFileInputStream</searchtext>
+			<searchtext label="BADAPI-FILEIO: java.io.FileOutputStream">\bFileOutputStream</searchtext>
+			<searchtext label="BADAPI-FILEIO: java.io.FileReader">\bFileReader</searchtext>
+			<searchtext label="BADAPI-FILEIO: java.io.FileReader">\bFileWriter</searchtext>
+			<searchtext label="BADAPI-DB: java.sql.Connection.createStatement">Connection\.createStatement</searchtext>
+			<searchtext label="BADAPI-DB: java.sql.Statement.execute">\.execute</searchtext>
+			<searchtext label="BADAPI-DB: java.sql.Statement.execute">\.executeQuery</searchtext>
+			<searchtext label="BADAPI-CMDEX: java.lang.runtime.Runtime.getRuntime">Runtime\.getRuntime</searchtext>
+			<searchtext label="BADAPI-CMDEX: java.lang.runtime.Runtime.exec">runtime\.exec\(</searchtext>
+			<searchtext label="BADAPI-URLREDIRECT: javax.servlet.http.HttpServletResponse.sendRedirect">\.sendRedirect</searchtext>
+			<searchtext label="BADAPI-URLREDIRECT:  javax.servlet.http.HttpServletResponse.setStatus" enabled="0">\.setStatus</searchtext>
+			<searchtext label="BADAPI-URLREDIRECT:  javax.servlet.http.HttpServletResponse.addHeader" enabled="0">\.addHeader</searchtext>
+			<searchtext label="BADAPI-INCLUDE: &lt;jsp:include" enabled="0">(?#This type of include is dynamically compiled. See TAOSSA Page 1109)&lt;jsp:include</searchtext>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>

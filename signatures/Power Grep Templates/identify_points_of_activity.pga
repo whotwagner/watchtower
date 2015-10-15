@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgr:powergrep xmlns:pgr="http://www.powergrep.com/powergrep35.xsd" version="3.5">
+	<actionfile>
+		<fileselection archives="1" globalmasks="1">
+			<drive name="T:">
+				<folder name="Projects">
+					<folder name="new">
+						<folder name="Davita_MCP">
+							<folder name="Application_Access_and_Code">
+								<folder name="MCP Code">
+									<folder name="MCP Code">
+										<folder name="MCP" marked="1" recursemasks="1"/>
+										<folder name="Web Services" marked="1" recursemasks="1"/>
+									</folder>
+								</folder>
+							</folder>
+						</folder>
+					</folder>
+				</folder>
+			</drive>
+		</fileselection>
+		<action actiontype="search" searchtype="literal list" concurrent="1">
+			<searchtext>antivirus</searchtext>
+			<searchtext>audit</searchtext>
+			<searchtext>auth</searchtext>
+			<searchtext>authenticate</searchtext>
+			<searchtext>authorize</searchtext>
+			<searchtext>authorization</searchtext>
+			<searchtext>certificate</searchtext>
+			<searchtext>x509</searchtext>
+			<searchtext>copy</searchtext>
+			<searchtext>cp</searchtext>
+			<searchtext>del</searchtext>
+			<searchtext>delete</searchtext>
+			<searchtext>mv</searchtext>
+			<searchtext>move</searchtext>
+			<searchtext>dns</searchtext>
+			<searchtext>ftp</searchtext>
+			<searchtext>ftp:\\</searchtext>
+			<searchtext>hack</searchtext>
+			<searchtext>hacking</searchtext>
+			<searchtext>hacker</searchtext>
+			<searchtext>http://</searchtext>
+			<searchtext>https://</searchtext>
+			<searchtext>ldap</searchtext>
+			<searchtext>ldaps</searchtext>
+			<searchtext>log</searchtext>
+			<searchtext>log4j</searchtext>
+			<searchtext>log4net</searchtext>
+			<searchtext>snmp</searchtext>
+			<searchtext>logging</searchtext>
+			<searchtext>mail</searchtext>
+			<searchtext>msad</searchtext>
+			<searchtext>nslookup</searchtext>
+			<searchtext>passwd</searchtext>
+			<searchtext>password</searchtext>
+			<searchtext>portal</searchtext>
+			<searchtext>purge</searchtext>
+			<searchtext>secure</searchtext>
+			<searchtext>security</searchtext>
+			<searchtext>sftp</searchtext>
+			<searchtext>sftp://</searchtext>
+			<searchtext>smb</searchtext>
+			<searchtext>smtp</searchtext>
+			<searchtext>ssh</searchtext>
+			<searchtext>telnet</searchtext>
+			<searchtext>uplink</searchtext>
+			<searchtext>upload</searchtext>
+			<searchtext>quarantine</searchtext>
+			<searchtext>valid</searchtext>
+			<searchtext>validator</searchtext>
+			<searchtext>validation</searchtext>
+			<searchtext>validate</searchtext>
+			<searchtext>virus</searchtext>
+			<searchtext>whois</searchtext>
+			<searchtext>virus</searchtext>
+			<searchtext>domain</searchtext>
+			<searchtext/>
+			<sectioning sectiontype="whole file count lines"/>
+		</action>
+	</actionfile>
+</pgr:powergrep>
