@@ -6,6 +6,7 @@ onto the desired location on your system, `cd` into it, and run
 
 ```bash
 cd ~/watchtower/
+bundle install
 ./watchtower --help
 ```
 
