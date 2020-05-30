@@ -75,6 +75,7 @@ $configs = {
 		'./signatures/sql.rb',
 		'./signatures/linux_files.rb',
 		'./signatures/comments.rb',
+		'./signatures/python.rb',
 		# './signatures/wordpress.rb',
 		# './signatures/blocklist.rb',
 	].sort,
