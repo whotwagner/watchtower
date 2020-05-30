@@ -68,6 +68,7 @@ $signatures[:java][:Potential_bypass_java_secu_policy]= [
 ]
 $signatures[:java][:Object_potential_vuln]= [
     # Object management
+    Signature.new({:literal => 'readObject'}),
     Signature.new({:literal => 'transient'}),
     Signature.new({:literal => 'serialPersistentFields'}),
     Signature.new({:literal => 'writeObject'}),
