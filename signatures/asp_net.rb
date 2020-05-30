@@ -31,3 +31,9 @@ $signatures[:asp_net][:HTTP_request] = [
     Signature.new({:literal => 'HttpResponse.AddHeader'}),
     Signature.new({:literal => 'HttpResponse.AppendHeader'}),
 ]
+
+$signatures[:asp_net][:Object_potential_vuln] = [
+    # Deserialisation 
+    Signature.new({:literal => 'Deserialize'}),
+    Signature.new({:literal => 'GetObjectValue'}),
+]
