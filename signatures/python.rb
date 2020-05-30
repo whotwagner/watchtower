@@ -1,7 +1,3 @@
-# 6.9.2015 - Updated w/signatures from Bishop Fox PowerGrep templates.
-# 7.31.2015 - Added swear words to custom signature strings
-# Enumerate a hash containing all of the various signatures (grouped
-# topically) for which one may want to scan.
 $signatures[:python] ||= {}
 
 $signatures[:python][:dangerous_functions] = [
