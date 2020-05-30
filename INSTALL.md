@@ -20,4 +20,5 @@ DEPENDENCES
 
 It also depends on the following Rubygems:
 * fastercsv
-* trollop
+* optimist
+* iconv

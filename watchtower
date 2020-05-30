@@ -13,7 +13,7 @@
 is_ruby_18 = (RUBY_VERSION[0,3] === '1.8')
 
 require 'rubygems'
-require 'backports'
+# require 'backports'
 require 'csv' unless is_ruby_18
 require 'digest'
 require 'erb'
@@ -21,7 +21,8 @@ require 'fastercsv' if is_ruby_18
 require 'fileutils'
 require 'iconv'
 require 'open-uri'
-require 'trollop'
+#require 'trollop'
+require 'optimist'
 require 'uri'
 require_relative 'lib/models/poi'
 require_relative 'lib/models/signature'
@@ -31,10 +32,10 @@ require_relative 'lib/models/vulnscanner'
 #######################################################################
 # Menu options and program flow
 #######################################################################
-opts = Trollop::options do
+opts = Optimist::options do
 	banner File.read('./lib/static/banner.txt')
 	
-	version 'Version: 1.4.8'
+	version 'Version: 1.4.9'
 
 	opt :scan,		    'The target to scan (may be a path on the local filesystem or a URL on the web)',
 			:type 		=> :string,
