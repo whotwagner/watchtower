@@ -23,3 +23,22 @@ It also depends on the following Rubygems:
 * fastercsv
 * optimist
 * iconv
+
+DOCKER
+======
+
+It is also possible to use watchtower with docker:
+
+Build:
+------
+
+```
+docker build -t watchtower .
+```
+
+Usage:
+------
+
+```
+docker run -v $PWD/source_code:/app/data -it watchtower -o html -s /app/data/
+```
